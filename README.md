@@ -1,2 +1,2 @@
 # Programmazione2
-Esercitazioni di programmazione in java.
+Una raccolta del codice scritto durante le esercitazioni di laboratorio del corso di Programmazione 2 (unimib).
