@@ -1,1 +1,5 @@
-/.idea/
+# Esclusione cartelle di intelliJ
+/L02/.idea/
+
+# Esclusione file di intelliJ
+/L02/L02.iml
