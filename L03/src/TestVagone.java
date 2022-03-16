@@ -23,15 +23,14 @@ public class TestVagone {
         locomotiva.next.next = new Vagone();
         locomotiva.next.next.classe = 1;
 
-        //TODO: implementare l'inserimento di un vagone in mezzo al treno
-        //come: utilizzare un oggetto temporaneo per sganciare l'ultimo vagone senza perderlo
-        //TODO: Verificare che pezzi mancano rispetto alla versione pubblicata dalla prof
+        //Implementazione inserimento di un elemento
         Vagone tmp = locomotiva.next.next;
+        locomotiva.next.next = new Vagone();
         locomotiva.next.next.next = tmp;
 
 
         //Implementazione dello scorrimento di una lista
-        Vagone tmp = locomotiva;
+        tmp = locomotiva;
         while(tmp != null){
             System.out.println(tmp.classe);
             tmp = tmp.next;
