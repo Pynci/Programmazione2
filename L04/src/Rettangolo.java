@@ -1,4 +1,5 @@
 // IL COMANDO javadoc NELLA CONSOLE PERMETTE DI GENERARE LA DOCUMENTAZIONE SCRITTA TRAMITE COMMENTI
+// Oppure, in intelliJ tools --> Generate JavaDoc
 
 /**
  * Questa classe rappresenta un Rettangolo con base e altezza di tipo int
