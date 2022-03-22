@@ -21,5 +21,8 @@ public class TestMetodi {
         esito = r1.equals(2,6);
         System.out.println("Esito del confronto:" + esito);
 
+        esito = r2.equals(4,2);
+        System.out.println("Esito del confronto:" + esito);
+
     }
 }
