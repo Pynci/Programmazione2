@@ -46,11 +46,16 @@ public class Rettangolo {
     //mi è creare un metodo con lo stesso identificativo a patto di cambiare i parametri formali
     //NB: non devo cambiare i NOMI dei parametri formali, ma i tipi!
     public boolean equals(Rettangolo rettangolo){
-        //effettuo il controllo per evitare nullpointer exception
-        if(rettangolo != null){
-            if(base == rettangolo.base && altezza == rettangolo.altezza){
-                return true;
-            }
+        //faccio questo controllo per evitare NullPointer Exception
+        if(rettangolo == null){
+            return false;
+        }
+        //l'identità da sicuramente esito true
+        if(this == rettangolo){
+            return true;
+        }
+        if(base == rettangolo.base && altezza == rettangolo.altezza){
+            return true;
         }
         return false;
     }
