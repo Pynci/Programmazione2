@@ -24,5 +24,14 @@ public class TestMetodi {
         esito = r2.equals(4,2);
         System.out.println("Esito del confronto:" + esito);
 
+        //c)
+        System.out.println("c)");
+        String statoR1 = r1.toString();
+        System.out.println(statoR1);
+
+        esito = r1.equals(r2);
+        System.out.println(esito);
+
+
     }
 }
