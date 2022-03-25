@@ -14,16 +14,17 @@ public class Test {
         System.out.println("a2.v1: " + a2.v1);
         System.out.println("Confronto tra a1.v1 e a2.v1: " + (a1.v1 == a2.v1));
         System.out.println("Confronto tra a1.v2 e a2.v2: " + (a1.v2 == a2.v2));
-        System.out.println("Confronto tra attributi: " + (a1.v1 == a2.v1 && a1.v2 == a2.v2));
+        System.out.println("Confronto di uguaglianza (attributi): " + (a1.v1 == a2.v1 && a1.v2 == a2.v2));
         System.out.println("Identità: " + (a1 == a2));
 
+        //assegnamento: l'oggetto puntato da a2 viene ora puntato anche da a3
         a3 = a2;
-
         System.out.println();
+
         //confronti tra a1 ed a3
         System.out.println("Confronto tra a1.v1 e a3.v1: " + (a1.v1 == a3.v1));
         System.out.println("Confronto tra a1.v2 e a3.v2: " + (a1.v2 == a3.v2));
-        System.out.println("Confronto tra attributi: " + (a1.v1 == a3.v1 && a1.v2 == a3.v2));
+        System.out.println("Confronto di uguaglianza (attributi): " + (a1.v1 == a3.v1 && a1.v2 == a3.v2));
         System.out.println("Identità: " + (a1 == a3));
     }
 }
