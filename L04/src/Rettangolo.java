@@ -10,6 +10,23 @@ public class Rettangolo {
     /** Rappresenta l'altezza del rettangolo */
     public int altezza;
 
+    public Rettangolo(){
+        //this() serve a usare il nome della classe per risolvere il costruttore
+        this(1,1);
+        //NB: la keyword "this()" deve essere la prima istruzione presente nel costruttore!
+    }
+
+    public Rettangolo(int base, int altezza){
+        this.base = base;
+        this.altezza = altezza;
+    }
+
+    public Rettangolo(Rettangolo rettangolo){
+        this(rettangolo.base, rettangolo.altezza);
+        //NB: do per scontato che rettangolo sarà diverso da null, altrimenti dovrei effettuare
+        //un controllo e non potrei utilizzare la keyword this()
+    }
+
     //a) metodo semplice
     /**
      * Il metodo calcola e restituisce l'area del rettangolo
