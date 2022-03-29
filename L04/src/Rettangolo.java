@@ -54,9 +54,17 @@ public class Rettangolo {
         if(this == rettangolo){
             return true;
         }
-        if(base == rettangolo.base && altezza == rettangolo.altezza){
-            return true;
+        return rettangolo.equals(base, altezza);
+    }
+
+    //in questo metodo non si fa mai riferimento a this --> posso scriverlo come un metodo di classe --> STATIC
+    public static boolean equals(Rettangolo r1, Rettangolo r2){
+        if(r1 != null && r2 != null){
+            if(r1.base == r2.base && r1.altezza == r2.altezza){
+                return true;
+            }
         }
         return false;
     }
+
 }
