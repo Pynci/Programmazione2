@@ -1,3 +1,3 @@
 public class Pagina {
-    public String testo;
+    public String testo = "";
 }
