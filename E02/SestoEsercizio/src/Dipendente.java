@@ -1,4 +1,4 @@
 public class Dipendente {
-    public int matricola;
-    public double costo;
+    public int matricola = 0;
+    public double costo = 0.0;
 }
