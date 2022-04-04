@@ -45,6 +45,13 @@ public class Azienda {
         return postoTrovato;
     }
 
+    public boolean assumi(Dipendente nuovoDip){
+        if(nuovoDip != null){
+            return assumi(nuovoDip.nome, nuovoDip.matricola, nuovoDip.costo);
+        }
+        return false;
+    }
+
     public Dipendente licenzia(int matricola){
         Dipendente licenziato = new Dipendente();
 
@@ -58,6 +65,13 @@ public class Azienda {
         }
 
         return licenziato;
+    }
+
+    public Dipendente licenzia(Dipendente dip){
+        if(dip != null){
+            return licenzia(dip.matricola);
+        }
+        return null;
     }
 
 
