@@ -5,7 +5,12 @@ public class Azienda {
     public String toString(){
         String statoDipendenti = "";
         for(int i = 0; i < dipendenti.length; i++){
-            statoDipendenti = statoDipendenti + "Dipendente " + i + "\n " + dipendenti[i].toString() + "\n";
+            if(dipendenti[i] != null){
+                statoDipendenti = statoDipendenti + "Dipendente " + i + "\n " + dipendenti[i].toString() + "\n";
+            }
+            else{
+                statoDipendenti = statoDipendenti + "Dipendente " + i + "\n " + "Posto vuoto\n";
+            }
         }
         return statoDipendenti;
     }
@@ -31,7 +36,8 @@ public class Azienda {
         }
 
         if(!giaPresente){
-            for(int i = 0; i < dipendenti.length; i++) {
+            int i = 0;
+            do{
                 if(dipendenti[i] == null){
                     dipendenti[i] = new Dipendente();
                     dipendenti[i].nome = nome;
@@ -39,7 +45,9 @@ public class Azienda {
                     dipendenti[i].costo = costo;
                     postoTrovato = true;
                 }
+                i++;
             }
+            while(i < dipendenti.length && postoTrovato == false);
         }
 
         return postoTrovato;

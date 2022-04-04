@@ -7,6 +7,6 @@ public class Dipendente {
         String statoMatricola = "Matricola: " + matricola + "; ";
         String statoCosto = "Costo: " + costo + "; ";
 
-        return statoMatricola + statoCosto;
+        return statoMatricola + statoCosto + "\n";
     }
 }
