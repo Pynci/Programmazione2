@@ -32,7 +32,8 @@ public class Cerchio {
 
     public void setCentro(Punto centro) {
         if(centro != null){
-            this.centro = centro;
+            //this.centro = centro; //con questo passo direttamente il riferimento al centro "originale"
+            this.centro = new Punto(centro); //sfrutto il costruttore per copia (evito privacy leak)
         }
         else{
             this.centro = new Punto();
@@ -44,7 +45,7 @@ public class Cerchio {
     }
 
     public Punto getCentro() {
-        return centro;
+        return new Punto(centro);   //sfrutto il costruttore per copia (evito privacy leak)
     }
 
     public String toString(){

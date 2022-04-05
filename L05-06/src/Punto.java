@@ -48,4 +48,8 @@ public class Punto {
         }
         return false;
     }
+
+    public String toString(){
+        return "(" + x + ", " + y + ")";
+    }
 }
