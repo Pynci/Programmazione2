@@ -46,4 +46,23 @@ public class Cerchio {
     public Punto getCentro() {
         return centro;
     }
+
+    public String toString(){
+        return "Carchio di raggio: " + raggio + ", e centro " + centro;
+        //NB: anche non scrivendo raggio.toString() o centro.toString() viene richiamato tale metodo
+        // perché sto effettuando una concatenazione di una stringa
+    }
+
+    public boolean equals(Cerchio cerchio){
+        if(cerchio == null){
+            return false;
+        }
+        if(this == cerchio){
+            return true;
+        }
+        if(raggio == cerchio.raggio && equals(cerchio)){    //è come scrivere this.equals(cerchio)
+            return true;
+        }
+        return false;
+    }
 }
