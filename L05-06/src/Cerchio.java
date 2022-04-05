@@ -61,7 +61,7 @@ public class Cerchio {
         if(this == cerchio){
             return true;
         }
-        if(raggio == cerchio.raggio && equals(cerchio)){    //è come scrivere this.equals(cerchio)
+        if(raggio == cerchio.raggio && centro.equals(cerchio.centro)){
             return true;
         }
         return false;
