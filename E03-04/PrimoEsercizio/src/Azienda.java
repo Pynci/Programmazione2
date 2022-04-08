@@ -1,6 +1,16 @@
 public class Azienda {
-    public String nome = "";
+    public String nome;
     public Dipendente[] dipendenti;
+
+    public Azienda(){
+        dipendenti = new Dipendente[1];
+        nome = "prova";
+    }
+
+    public Azienda(String nome, int numeroDipendenti){
+        this.nome = nome;
+        dipendenti = new Dipendente[numeroDipendenti];
+    }
 
     public String toString(){
         String statoDipendenti = "";
@@ -47,7 +57,7 @@ public class Azienda {
                 }
                 i++;
             }
-            while(i < dipendenti.length && postoTrovato == false);
+            while(i < dipendenti.length && !postoTrovato);
         }
 
         return postoTrovato;
@@ -57,7 +67,9 @@ public class Azienda {
         if(nuovoDip != null){
             return assumi(nuovoDip.nome, nuovoDip.matricola, nuovoDip.costo);
         }
-        return false;
+        else{
+            return false;
+        }
     }
 
     public Dipendente licenzia(int matricola){
