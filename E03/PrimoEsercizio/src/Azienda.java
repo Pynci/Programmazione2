@@ -1,5 +1,5 @@
 public class Azienda {
-    public String nome;
+    public String nome = "";
     public Dipendente[] dipendenti;
 
     public String toString(){
@@ -12,7 +12,7 @@ public class Azienda {
                 statoDipendenti = statoDipendenti + "Dipendente " + i + "\n " + "Posto vuoto\n";
             }
         }
-        return statoDipendenti;
+        return nome + "\n" + statoDipendenti;
     }
 
     public double calcolaCosto(){
