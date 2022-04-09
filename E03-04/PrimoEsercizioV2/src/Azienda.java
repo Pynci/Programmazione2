@@ -108,7 +108,26 @@ public class Azienda {
         }
     }
 
-    //TODO: metodi contains
+    public boolean contains(int matricola){
+        boolean found = false;
+
+        for(int i = 0; i < numDip(); i++){
+            if(dipendenti[i] != null && dipendenti[i].getMatricola() == matricola){
+                found = true;
+            }
+        }
+
+        return found;
+    }
+
+    public boolean contains(Dipendente dip){
+        if(dip != null){
+            return contains(dip.getMatricola());
+        }
+        else{
+            return false;
+        }
+    }
 
 
 }
