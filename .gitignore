@@ -3,3 +3,6 @@
 
 # Esclusione file di intelliJ
 /L02/L02.iml
+
+# Esclusione file di Eclipse
+/PrimoParziale/.metadata/
