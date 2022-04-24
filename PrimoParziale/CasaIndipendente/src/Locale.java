@@ -9,7 +9,7 @@ public class Locale {
 	}
 	
 	public Locale(String tipo) {
-		this(5,tipo);
+		this(10,tipo);
 	}
 	
 	public int getMq() {
@@ -31,7 +31,7 @@ public class Locale {
 	
 	public void setTipo(String tipo) {
 		if(tipo == null || tipo.equals("")) {
-			this.tipo = "Camera";
+			this.tipo = "camera";
 		}
 		else {
 			this.tipo = tipo;
