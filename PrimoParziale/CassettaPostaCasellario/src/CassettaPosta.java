@@ -23,11 +23,6 @@ public class CassettaPosta {
 	public CassettaPosta(String nome) {
 		this(nome,5);
 	}
-	
-	//in dubbio se serve o no
-	public String getNome() {
-		return nome;
-	}
 
 	public boolean inserisciLettera() {
 		if(numeroLettere < numeroLettereMax) {
@@ -38,8 +33,6 @@ public class CassettaPosta {
 			return false;
 		}
 	}
-	
-	
 	
 	public int prelevaPosta() {
 		int temp = numeroLettere;
