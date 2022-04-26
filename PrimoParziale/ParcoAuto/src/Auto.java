@@ -26,7 +26,7 @@ public class Auto {
 		return targa;
 	}
 
-	public int getKm() {
+	public int getKmPercorsi() {
 		return km;
 	}
 	
@@ -37,7 +37,7 @@ public class Auto {
 		else if(this == altra) {
 			return true;
 		}
-		else if(this.targa.equals(altra.targa)) {
+		else if(this.targa.equalsIgnoreCase(altra.targa)) {
 			return true;
 		}
 		else {
