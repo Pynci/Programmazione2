@@ -44,7 +44,7 @@ public class ToDoList {
 			int durataGiorno = getDurataTaskGiorno(task.getData());
 			int posizioneTaskUguale = getPosizioneTask(task);
 			
-			if(posizioneTaskUguale == -1 && (durataGiorno + task.getDurata() <= 8));{
+			if(posizioneTaskUguale == -1 && (durataGiorno + task.getDurata() <= 8)){
 				int i = 0;
 				while(i < toDo.length && !inserita) {
 					if(toDo[i] == null) {
