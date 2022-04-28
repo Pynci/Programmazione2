@@ -39,24 +39,19 @@ public class ToDoList {
 	
 	public boolean aggiungiTask(Task task) {
 		boolean inserita = false;
-		boolean presente = false;
 		
-		if(task != null && task.getDurata() + getDurataTaskGiorno(task.getData()) <= 8) {
-			for(int i = 0; i < toDo.length; i++) {
-				if(toDo[i] != null && toDo[i].equals(task)) {
-					presente = true;
-				}
-				
-				if(!presente) {
-					int j = 0;
-					
-					while(j < toDo.length && !inserita) {
-						if(toDo[j] == null) {
-							toDo[j] = task;
-							inserita = true;
-						}
-						j++;
+		if(task != null) {
+			int durataGiorno = getDurataTaskGiorno(task.getData());
+			int posizioneTaskUguale = getPosizioneTask(task);
+			
+			if(posizioneTaskUguale == -1 && (durataGiorno + task.getDurata() <= 8));{
+				int i = 0;
+				while(i < toDo.length && !inserita) {
+					if(toDo[i] == null) {
+						toDo[i] = task;
+						inserita = true;
 					}
+					i++;
 				}
 			}
 		}
