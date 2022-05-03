@@ -12,8 +12,8 @@ public class RepositoryProgrammazione2{
     prog2 = new Subject("Programmazione2");
     testoEsercizi = new Testo(unimib.getCourse("Informatica").getSource(prog2));
     argomenti = {"incapsulamento", "ereditarietà", "polimorfismo",
-                "classi astratte", "interfacce", "gestione eccezioni",
-                "collezioni"};
+                 "classi astratte", "interfacce", "gestione eccezioni",
+                 "collezioni"};
   }
   
 }
