@@ -41,6 +41,6 @@ public class Prodotto {
 	}
 	
 	public String toString() {
-		return "[nome:" + nome + "; prezzo: " + prezzo + "; sconto: " + sconto + ";]";
+		return "[nome:" + nome + "][prezzo:" + prezzo + "][sconto:" + sconto + "]";
 	}
 }
