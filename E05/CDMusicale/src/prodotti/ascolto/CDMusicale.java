@@ -7,11 +7,12 @@ public class CDMusicale extends Prodotto {
 	
 	protected CDMusicale(String nome, double prezzo, double sconto) {
 		super(nome,prezzo,sconto);
+		canzoni = new Canzone[1];
 	}
 	
 	public CDMusicale(String nome, double prezzo, double sconto, Canzone[] canzoni) {
 		this(nome,prezzo,sconto);
-		this.canzoni = canzoni;
+		setCanzoni(canzoni);
 	}
 	
 	protected void setCanzoni(Canzone[] canzoni) {

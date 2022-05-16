@@ -36,10 +36,12 @@ public class Libro extends Prodotto {
 	public String sfoglia() {
 		String lettura = "";
 		
-		for(int i = 0; i < pagine.length; i++) {
-			if(pagine[i] != null && !pagine[i].isEmpty()) {
-				lettura += "\n" + pagine[i];
-			}
+		if(pagine != null) {
+			for(int i = 0; i < pagine.length; i++) {
+				if(pagine[i] != null && !pagine[i].isEmpty()) {
+					lettura += "\n" + pagine[i];
+				}
+			}	
 		}
 		
 		return lettura;

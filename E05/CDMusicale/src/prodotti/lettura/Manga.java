@@ -15,9 +15,11 @@ public class Manga extends Libro {
 	public String sfoglia() {
 		String lettura = "";
 		
-		for(int i = pagine.length; i > 0; i--) {
-			if(pagine[i] != null && !pagine[i].isEmpty()) {
-				lettura += "\n" + pagine[i];
+		if(pagine != null) {
+			for(int i = pagine.length-1; i >= 0; i--) {
+				if(pagine[i] != null && !pagine[i].isEmpty()) {
+					lettura += "\n" + pagine[i];
+				}
 			}
 		}
 		

@@ -37,7 +37,7 @@ public class Prodotto {
 	}
 	
 	public double calcolaPrezzo() {
-		return prezzo - sconto;
+		return prezzo - (prezzo * sconto) / 100;
 	}
 	
 	public String toString() {
