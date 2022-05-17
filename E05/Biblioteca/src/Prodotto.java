@@ -4,7 +4,6 @@ public class Prodotto {
 	private String nome;
 	
 	public Prodotto(String nome, double prezzo, double sconto) {
-		//eventuali controlli ancora da implementare
 		this.nome = nome;
 		this.prezzo = prezzo;
 		this.sconto = sconto;
