@@ -45,6 +45,9 @@ public class MyTest {
 		*/
 	}
 	
+	/*
+	 * Qua per qualche motivo c'è un testRegalo()
+	 * La classe Regalo non viene nemmeno vagamente nominata nella consegna, io boh
 	@Test
 	public void testRegalo(){
 		Prodotto p1=new Prodotto("Vino Rosso",10,1.2);
@@ -66,6 +69,7 @@ public class MyTest {
 		
 		
 	}
+	*/
 	
 	/*
 	 * 
