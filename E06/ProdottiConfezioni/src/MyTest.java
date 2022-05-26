@@ -45,6 +45,9 @@ public class MyTest {
 		
 	}
 	
+	/*
+	 * Qua per qualche motivo c'è un testRegalo()
+	 * La classe Regalo non viene nemmeno vagamente nominata nella consegna, io boh
 	@Test
 	public void testRegalo(){
 		Prodotto p1=new Prodotto("Vino Rosso",10,1.2);
@@ -66,4 +69,42 @@ public class MyTest {
 		
 		
 	}
+<<<<<<< HEAD
+=======
+	*/
+	
+	/*
+	 * 
+	 * Togliete questo commento, e sostituite i vari ? con true/false per le assert,
+	 * e i numeri che vi aspettate nelle assertEquals
+	 * 
+	@Test
+	public void testDividi(){
+		Prodotto p1=new Prodotto("Vino Rosso",10,1.2);
+		Prodotto c=new Confezione("Girelle",10,1.2,10);
+		
+		Prodotto p2;
+		
+		p2= p1.dividi();
+		assert?(p2 instanceof Prodotto);
+		assertEquals(p2.getCosto_base(),?,0);
+		
+		p2= p1.dividi(4);
+		assert?(p2 instanceof Prodotto);
+		assertEquals(p2.getCosto_base(),?,0);
+		
+		p2= c.dividi();
+		assert?(p2 instanceof Confezione);
+		assertEquals(p2.getCosto_base(),?,0);
+		assertEquals(((Confezione)p2).getPezzi(),?);
+		
+		p2= c.dividi(2);
+		assert?(p2 instanceof Confezione);
+		assertEquals(p2.getCosto_base(),?,0);
+		assertEquals(((Confezione)p2).getPezzi(),?);
+		
+	}
+	
+	*/
+>>>>>>> c46a9de6cbe0acc15d10fb9b1baea0a77c31fc9d
 }
