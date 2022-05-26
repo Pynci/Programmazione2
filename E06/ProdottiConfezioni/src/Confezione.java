@@ -43,5 +43,15 @@ public class Confezione extends Prodotto {
 		return true;
 	}
 	
+	@Override
+	public Confezione dividi(int n) {
+		return new Confezione(getDescrizione(), getCosto_base(), getIva(), numeroPezzi/n);
+	}
+	
+	@Override
+	public Confezione dividi() {
+		return dividi(numeroPezzi);
+	}
+	
 	
 }

@@ -79,6 +79,14 @@ public class Prodotto {
 		}
 		return true;
 	}
+	
+	public Prodotto dividi(int n) {
+		return new Prodotto(descrizione, costo_base/n, iva);
+	}
+	
+	public Prodotto dividi() {
+		return dividi(2);
+	}
 
 
 	

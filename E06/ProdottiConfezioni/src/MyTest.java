@@ -18,6 +18,7 @@ public class MyTest {
 	}
 	
 
+	//svolgimento primo esercizio
 	@Test
 	public void testEquals(){
 		Prodotto p1=new Prodotto("Vino Rosso",10,1.2);
@@ -27,22 +28,21 @@ public class MyTest {
 		Confezione p5=new Confezione("Girelle",5,1.2,10);
 		Prodotto p6=new Confezione("Girelle",5,1.2,10);
 		
-		// Da completare con le varie assert, in base a quello che vi aspettate come risultato
-		/*
-		assert?(p1.equals(p2));
+		
+		assertTrue(p1.equals(p2));
 	
-		assert?(p1.equals(p3));
+		assertFalse(p1.equals(p3));
 		
-		assert?(p1.equals(null));
+		assertFalse(p1.equals(null));
 		
-		assert?(p4.equals(p5));
+		assertFalse(p4.equals(p5));
 		
-		assert?(p5.equals(p6));
+		assertTrue(p5.equals(p6));
 		
-		assert?(p5.equals(p1));
+		assertFalse(p5.equals(p1));
 		
-		assert?(p4.equals(p1));
-		*/
+		assertFalse(p4.equals(p1));
+		
 	}
 	
 	@Test
@@ -66,38 +66,4 @@ public class MyTest {
 		
 		
 	}
-	
-	/*
-	 * 
-	 * Togliete questo commento, e sostituite i vari ? con true/false per le assert,
-	 * e i numeri che vi aspettate nelle assertEquals
-	 * 
-	@Test
-	public void testDividi(){
-		Prodotto p1=new Prodotto("Vino Rosso",10,1.2);
-		Prodotto c=new Confezione("Girelle",10,1.2,10);
-		
-		Prodotto p2;
-		
-		p2= p1.dividi();
-		assert?(p2 instanceof Prodotto);
-		assertEquals(p2.getCosto_base(),?,0);
-		
-		p2= p1.dividi(4);
-		assert?(p2 instanceof Prodotto);
-		assertEquals(p2.getCosto_base(),?,0);
-		
-		p2= c.dividi();
-		assert?(p2 instanceof Confezione);
-		assertEquals(p2.getCosto_base(),?,0);
-		assertEquals(((Confezione)p2).getPezzi(),?);
-		
-		p2= c.dividi(2);
-		assert?(p2 instanceof Confezione);
-		assertEquals(p2.getCosto_base(),?,0);
-		assertEquals(((Confezione)p2).getPezzi(),?);
-		
-	}
-	
-	*/
 }
