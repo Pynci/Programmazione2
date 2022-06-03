@@ -7,16 +7,34 @@ public class Smartphone extends Device implements ICamera, ITelephone {
 		gallery = new Photo[gallerySize];
 		credit = 0;
 	}
+	
+	public void addCredit(int newCredit) {
+		if(newCredit > 0) {
+			credit += newCredit;
+		}
+	}
 
 	@Override
 	public boolean call(long num) {
-		// TODO Auto-generated method stub
+		if(num > 0 && credit > 0) {
+			credit--;
+			return true;
+		}
 		return false;
 	}
 
 	@Override
 	public boolean takePhoto() {
-		// TODO Auto-generated method stub
+		if(isReady()) {
+			Photo newPhoto = new Photo();
+			for(int i = 0; i < gallery.length; i++) {
+				if(gallery[i] == null) {
+					gallery[i] = newPhoto;
+					return true;
+				}
+			}
+		}
+		
 		return false;
 	}
 
