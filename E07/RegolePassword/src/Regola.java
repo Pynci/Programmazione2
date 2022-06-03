@@ -2,11 +2,13 @@
 public abstract class Regola {
 	
 	public boolean convalida(Account account) {
-		return false;
+		if (account == null || account.getPassword() == null || account.getPassword().isEmpty()) {
+			return false;
+		} 
+		return applica(account);
 	}
 	
-	protected boolean applica(Account account) {
-		return false;
-	}
+	protected abstract boolean applica(Account account);
+	
 	
 }
