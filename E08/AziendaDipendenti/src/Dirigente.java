@@ -13,4 +13,8 @@ public class Dirigente extends Dipendente {
 		return 14 * this.getStipendioMensile() + benefit;
 	}
 
+	public double getBenefit() {
+		return benefit;
+	}
+
 }
