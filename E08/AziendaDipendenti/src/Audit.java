@@ -27,4 +27,36 @@ public class Audit {
 		return false;
 	}
 	
+	public boolean isSorted(Dipendente[] dipendenti) throws InvalidArrayException {
+		try {
+			
+			Dipendente precedente = dipendenti[0];
+			for(int i = 0; i < dipendenti.length; i++) {
+				Dipendente successivo = dipendenti[i];
+				if(successivo.calcolaRal() > precedente.calcolaRal()) {
+					return false;
+				}
+				precedente = successivo;
+			}
+			return true;
+			
+		}
+		catch(NullPointerException npe) {
+			throw new InvalidArrayException();
+		}
+		catch(IndexOutOfBoundsException ioobe) {
+			return true;
+		}
+		
+	}
+	
+	public Dipendente topRal(Dipendente[] dipendenti) throws InvalidArrayException {
+		if(isSorted(dipendenti)) {
+			return dipendenti[0];
+		}
+		else {
+			throw new InvalidArrayException("array non ordinato");
+		}
+	}
+	
 }

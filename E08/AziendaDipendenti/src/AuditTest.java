@@ -1,5 +1,6 @@
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 class AuditTest {
@@ -25,6 +26,13 @@ class AuditTest {
 		Audit audit = new Audit();
 		boolean result = audit.benefitTroppoAlto(null);
 		assertFalse(result);		
+	}
+	
+	@Test
+	void testArrayVuoto() {
+		Audit audit = new Audit();
+		Dipendente[] dipendenti = new Dipendente[0];
+		Assertions.assertThrows(IndexOutOfBoundsException.class, () -> audit.topRal(dipendenti));
 	}
 	
 }
