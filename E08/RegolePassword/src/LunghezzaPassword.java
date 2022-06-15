@@ -3,8 +3,13 @@ public class LunghezzaPassword extends Regola {
 
 	private int lunghezzaMinima;
 	
-	public LunghezzaPassword(int lunghezzaMinima) {
-		this.lunghezzaMinima = lunghezzaMinima;
+	public LunghezzaPassword(int lunghezzaMinima) throws RegolaException {
+		if(lunghezzaMinima > 0) {
+			this.lunghezzaMinima = lunghezzaMinima;
+		}
+		else {
+			throw new RegolaException("lunghezza minima invalida");
+		}
 	}
 
 	@Override
