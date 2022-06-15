@@ -2,8 +2,13 @@
 public class Azienda {
 	Dipendente[] dipendenti;
 	
-	public Azienda(int numDipendenti) {
-		this.dipendenti = new Dipendente[numDipendenti];
+	public Azienda(int numDipendenti) throws AziendaException {
+		if(numDipendenti > 0) {
+			this.dipendenti = new Dipendente[numDipendenti];
+		}
+		else {
+			throw new AziendaException("numero massimo di dipendenti nullo o negativo");
+		}
 	}
 	
 	public boolean aggiungiDipendente(Dipendente nuovo) {

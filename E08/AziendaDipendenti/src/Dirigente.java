@@ -3,9 +3,15 @@ public class Dirigente extends Dipendente {
 	
 	private double benefit;
 	
-	public Dirigente(String nome, int matricola, double stipendioMensile, double benefit) {
+	public Dirigente(String nome, int matricola, double stipendioMensile, double benefit) throws DipendenteException {
 		super(nome, matricola, stipendioMensile);
-		this.benefit = benefit;
+		
+		if(benefit >= 0) {
+			this.benefit = benefit;
+		}
+		else {
+			throw new DipendenteException("benefit negativo");
+		}
 	}
 	
 	@Override

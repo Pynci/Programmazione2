@@ -1,7 +1,7 @@
 
 public class Impiegato extends Dipendente {
 	
-	public Impiegato(String nome, int matricola, double stipendioMensile) {
+	public Impiegato(String nome, int matricola, double stipendioMensile) throws DipendenteException {
 		super(nome, matricola, stipendioMensile);
 	}
 	

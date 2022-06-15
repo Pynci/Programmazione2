@@ -5,10 +5,27 @@ public abstract class Dipendente {
 	private int matricola;
 	private double stipendioMensile;
 	
-	public Dipendente(String nome, int matricola, double stipendioMensile) {
-		this.nome = nome;
-		this.matricola = matricola;
-		this.stipendioMensile = stipendioMensile;
+	public Dipendente(String nome, int matricola, double stipendioMensile) throws DipendenteException {
+		if(nome != null && !nome.isEmpty()) {
+			this.nome = nome;
+		}
+		else {
+			throw new DipendenteException("nome invalido");
+		}
+		
+		if(matricola >= 0) {
+			this.matricola = matricola;
+		}
+		else {
+			throw new DipendenteException("matricola negativa");
+		}
+		
+		if(stipendioMensile >= 1000) {
+			this.stipendioMensile = stipendioMensile;
+		}
+		else {
+			throw new DipendenteException("stipendio da fame");
+		}
 	}
 	
 	public abstract double calcolaRal();
