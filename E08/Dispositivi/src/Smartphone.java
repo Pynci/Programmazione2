@@ -3,9 +3,14 @@ public class Smartphone extends Device implements ICamera, ITelephone {
 	private Photo[] gallery;
 	private int credit;
 	
-	public Smartphone(int gallerySize) {
-		gallery = new Photo[gallerySize];
+	public Smartphone(int gallerySize) throws DeviceException {
 		credit = 0;
+		if(gallerySize > 0) {
+			gallery = new Photo[gallerySize];
+		}
+		else {
+			throw new DeviceException("dimensione galleria non valida");
+		}
 	}
 	
 	public void addCredit(int newCredit) {
