@@ -33,6 +33,7 @@ class AuditTest {
 		Audit audit = new Audit();
 		Dipendente[] dipendenti = new Dipendente[0];
 		Assertions.assertThrows(IndexOutOfBoundsException.class, () -> audit.topRal(dipendenti));
+		//se l'array è vuoto chiaramente non è possibile identificare un dipendente[0]!
 	}
 	
 }
