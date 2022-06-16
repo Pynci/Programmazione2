@@ -13,7 +13,7 @@ public class RepositoryProgrammazione2{
     testoEsercizi = new Testo(unimib.getCourse("Informatica").getSource(prog2));
     argomenti = {"incapsulamento", "ereditarietà", "polimorfismo",
                  "classi astratte", "interfacce", "gestione eccezioni",
-                 "collezioni"};
+                 "collezioni", "I/O"};
   }
   
 }
