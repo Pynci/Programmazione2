@@ -1,0 +1,3 @@
+P2A08 {[aeroportoPartenza:MXP,aeroportoArrivo:SFO][numeroTratte:3][durataInMinuti:745]}
+P2A03 {[aeroportoPartenza:FCO,aeroportoArrivo:SFO][numeroTratte:1][durataInMinuti:665]}
+P2A01 {[aeroportoPartenza:MXP,aeroportoArrivo:LIN][numeroTratte:1][durataInMinuti:20]}

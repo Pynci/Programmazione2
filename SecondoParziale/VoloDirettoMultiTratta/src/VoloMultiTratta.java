@@ -47,7 +47,7 @@ public class VoloMultiTratta extends Volo {
 	}
 	
 	public String toString() {
-		return "{" + super.toString() + "[numeroTratte:" + getNumeroTratte() + "][durataInMinuti:" + getDurataInMinuti() + "]";
+		return "{" + super.toString() + "[numeroTratte:" + getNumeroTratte() + "][durataInMinuti:" + getDurataInMinuti() + "]}";
 	}
 
 }
