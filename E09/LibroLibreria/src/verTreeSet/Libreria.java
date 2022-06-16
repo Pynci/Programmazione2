@@ -18,6 +18,7 @@ public class Libreria {
 		libri = new TreeSet<Libro>();
 	}
 	
+	//TODO capire come mai il test genera un'eccezione dovuta ad un cast mai richiesto
 	
 	public boolean aggiungiLibro(Libro libro) {
 		return libri.add(libro);
