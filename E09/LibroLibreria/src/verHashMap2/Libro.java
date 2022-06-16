@@ -59,6 +59,11 @@ public class Libro {
 	}
 
 	@Override
+	public int hashCode() {
+		return Objects.hash(anno, autore, titolo);
+	}
+
+	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
@@ -67,8 +72,7 @@ public class Libro {
 		if (getClass() != obj.getClass())
 			return false;
 		Libro other = (Libro) obj;
-		return Objects.equals(anno, other.anno) && Objects.equals(autore, other.autore)
-				&& Objects.equals(titolo, other.titolo);
+		return anno == other.anno && Objects.equals(autore, other.autore) && Objects.equals(titolo, other.titolo);
 	}
 	
 	
