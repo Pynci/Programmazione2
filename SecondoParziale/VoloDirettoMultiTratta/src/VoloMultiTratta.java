@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.List;
 
 public class VoloMultiTratta extends Volo {
 	
@@ -14,6 +14,8 @@ public class VoloMultiTratta extends Volo {
 			}
 			precedente = tratte.get(i);
 		}
+		
+		this.tratte = tratte;
 	}
 	
 	private static String estraiAeroportoPartenza(List<VoloDiretto> tratte) throws VoloNonValidoException {

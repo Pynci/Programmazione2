@@ -12,7 +12,7 @@ public abstract class Volo {
 			throw new VoloNonValidoException("ATTENZIONE: aeroporto di partenza non valido");
 		}
 		
-		if(Aeroporti.aeroportoValido(aeroportoPartenza)) {
+		if(Aeroporti.aeroportoValido(aeroportoArrivo)) {
 			this.aeroportoArrivo = aeroportoArrivo;
 		}
 		else {
@@ -35,5 +35,6 @@ public abstract class Volo {
 	public String toString() {
 		return "[aeroportoPartenza:" + aeroportoPartenza + ",aeroportoArrivo:" + aeroportoArrivo + "]"; 
 	}
+	
 	
 }

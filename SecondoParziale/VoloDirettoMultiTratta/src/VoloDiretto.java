@@ -28,6 +28,6 @@ public class VoloDiretto extends Volo {
 	}
 	
 	public String toString() {
-		return "{" + super.toString() + "[durataInMinuti:" + getDurataInMinuti() + "]" + "}";
+		return "{" + super.toString() + "[numeroTratte:" + getNumeroTratte() + "]" + "[durataInMinuti:" + getDurataInMinuti() + "]" + "}";
 	}
 }
