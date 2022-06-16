@@ -44,11 +44,6 @@ public class Libreria {
 	}
 	
 	public String toString() {
-		String stringa = "{\n";
-		for(Libro libro: libri) {
-			stringa += libro.toString() + "\n";
-		}
-		stringa += "}";
-		return stringa;
+		return "Libreria {" + nome + ", " + libri.toString() + "}";
 	}
 }
