@@ -35,12 +35,12 @@ class LibreriaTest {
 		
 		System.out.println(l.toString());
 		
-		int total = l.conta();
-		assertEquals(8, total);
+		int total = l.quantitaLibri();
+		assertEquals(6, total);
 		
-		List<Libro> rimossi = l.rimuoviLibri(2010);
+		List<Libro> rimossi = l.rimuoviLibriAnno(2010);
 		assertEquals(3, rimossi.size());
-		total = l.conta();
+		total = l.quantitaLibri();
 		assertEquals(3, total);
 		
 		System.out.println(l.toString());		
